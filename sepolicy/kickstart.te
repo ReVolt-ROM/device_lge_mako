@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # kickstart processes and scripts
 type kickstart, domain;
 type kickstart_exec, exec_type, file_type;
@@ -39,3 +40,10 @@ allow kickstart radio_prop:property_service set;
 allow kickstart shell_exec:file entrypoint;
 # ls on /data/qcks/
 allow kickstart self:capability dac_override;
+=======
+type kickstart, domain;
+permissive kickstart;
+type kickstart_exec, file_type, exec_type;
+domain_auto_trans(init, kickstart_exec, kickstart)
+unconfined_domain(kickstart)
+>>>>>>> FETCH_HEAD

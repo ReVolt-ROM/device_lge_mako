@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 type mpdecision_socket, file_type;
 type qmuxd_socket, file_type;
 type sensors_socket, file_type;
@@ -16,3 +17,12 @@ type persist_bluetooth_file, file_type;
 type persist_drm_file, file_type;
 type persist_sensors_file, file_type;
 type persist_wifi_file, file_type;
+=======
+# Qualcomm MSM Interface (QMI) socket types
+type qmux_audio_socket, file_type;
+type qmux_bluetooth_socket, file_type;
+type qmux_gps_socket, file_type;
+type qmux_radio_socket, file_type;
+
+type audio_firmware_file, file_type;
+>>>>>>> FETCH_HEAD
