@@ -39,7 +39,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=mako lpj=
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
 TARGET_KERNEL_SOURCE := kernel/lge/mako
-TARGET_KERNEL_CONFIG := pa_mako_defconfig
+TARGET_KERNEL_CONFIG := mako_defconfig
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
@@ -108,26 +108,35 @@ BOARD_HAVE_LOW_LATENCY_AUDIO := true
 BOARD_SEPOLICY_DIRS := \
        device/lge/mako/sepolicy
 
-BOARD_SEPOLICY_UNION := \
-       app.te \
-       bluetooth.te \
-       compatibility.te \
-       device.te \
-       domain.te \
-       drmserver.te \
-       file.te \
-       file_contexts \
-       hci_init.te \
-       init_shell.te \
-       keystore.te \
-       mediaserver.te \
-       kickstart.te \
-       nfc.te \
-       rild.te \
-       surfaceflinger.te \
-       system.te \
-       ueventd.te \
-       wpa.te
+BOARD_SEPOLICY_UNION += \
+file_contexts \
+property_contexts \
+te_macros \
+bluetooth_loader.te \
+bridge.te \
+camera.te \
+conn_init.te \
+device.te \
+dhcp.te \
+domain.te \
+drmserver.te \
+file.te \
+kickstart.te \
+init.te \
+mediaserver.te \
+mpdecision.te \
+netmgrd.te \
+property.te \
+qmux.te \
+rild.te \
+rmt.te \
+sensors.te \
+surfaceflinger.te \
+system.te \
+tee.te \
+thermald.te \
+ueventd.te \
+wpa_supplicant.te
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
