@@ -264,6 +264,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.enable-charging-led=0
 
+# QRNGD
+PRODUCT_PACKAGES += qrngd
+
 # This is the mako-specific audio package
 $(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
